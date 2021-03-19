@@ -1,0 +1,151 @@
+header{
+	position: static;
+}
+main{
+	margin: auto;
+	width: 95%;
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.article-main-cnt{
+	font-family: 'Roboto';
+	max-width: 1320px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.article-fotos{
+	width: 65%;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-auto-rows: 300px;
+	gap:20px;
+	justify-content: center;
+}
+.foto-producto{
+	background-color: gray;
+	background-image: url("recursos/espectro.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.article-comprar-aside{
+	width: 33%;
+}
+.article-precio-base,.article-precio-alter{
+	font-weight: bold;
+	display: flex;
+	justify-content: space-between;
+}
+.article-precio-base{
+	font-size: 26px;
+}
+.article-precio-alter{
+	font-size: 20px;
+	margin-top: 10px;
+}
+.article-compra-info{
+	font-size: 18px;
+	font-weight: lighter;
+	margin-top: 70px;
+}
+.btn-comprar{
+	color: white;
+	background: #1597E0;
+	border: 1px solid #5BC4FF;
+	font-size: 20px;
+	font-weight: bold;
+	width: 100%;
+	height: 40px;
+	margin-top: 40px;
+	cursor: pointer;
+}
+.btn-comprar:hover{
+	background: #17aaff;
+	border: 1px solid #4ab5f3;
+}
+.btn-comprar:active{
+	padding: 0;
+}
+.btn-producto-expandir{
+	display: none;
+}
+
+@media screen and (max-width: 1020px){
+	.article-main-cnt{
+		flex-direction: column;
+		align-items: center;
+	}
+	.article-fotos{
+		max-width: 650px;
+		width: 90%;
+		grid-template-columns: 1fr;
+		grid-auto-rows: 220px;
+		gap:20px;
+	}
+	.article-comprar-aside{
+		max-width: 650px;
+		width: 90%;
+	}
+	.article-precio-base{
+		font-size: 22px;
+	}
+	.article-precio-alter{
+		font-size: 18px;
+		margin-top: 10px;
+	}
+	.article-compra-info{
+		font-size: 14px;
+		font-weight: lighter;
+		margin-top: 40px;
+	}
+	.btn-comprar{
+		font-size: 18px;
+		width: 100%;
+		height: 40px;
+	}
+	.foto-producto-tres,.foto-producto-cuatro{
+		display: none;
+	}
+	.btn-producto-expandir{
+		font-size: 10px;
+		background-color: #1597E0;
+		border-radius: 100px;
+		border: none;
+		width: 60px;
+		height: 25px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		cursor: pointer;
+		justify-content: center;
+		display: flex;
+		justify-self: center;
+	}
+	.btn-producto-expandir i{
+		color: white;
+		margin: auto 3px;
+	}
+	.btn-producto-expandir:hover{
+		background-color: #17aaff;
+	}
+	.btn-producto-expandir:active{
+		padding: 0;
+	}
+	.btn-producto-expandir:hover .fa-p{
+		animation: salto 1.5s ease-out infinite;
+	}
+	.btn-producto-expandir:hover .fa-s{
+		animation: salto 1.5s ease-out infinite;
+		animation-delay: .1s;
+	}
+	.btn-producto-expandir:hover .fa-t{
+		animation: salto 1.5s ease-out infinite;
+		animation-delay: .2s;
+	}
+	@keyframes salto{
+		0% {transform: translateY(0);}
+		10% {transform: translateY(-5px);}
+		20% {transform: translateY(0);}
+		100% {transform: translateY(0);}
+	}
+}

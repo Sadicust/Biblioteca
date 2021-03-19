@@ -1,0 +1,134 @@
+.fav-main-cnt{
+	font-family: 'Roboto';
+	width: 50%;
+	margin-top: 70px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+.fav-main-cnt > h1{
+	font-weight: 400;
+	font-size: 36px;
+	color: #616161;
+	margin-top: 70px;
+}
+hr{
+	color: #C0C0C0;
+	width: 400px;
+	margin-bottom: 70px;
+}
+.fav-lista{
+	width: 100%;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, 200px);
+	grid-auto-rows: 200px;
+	gap: 50px 150px;
+}
+.fav-c{
+	width: 300px;
+	position: relative;
+	transition: .5s;
+}
+.fav-img{
+	background-color: gray;
+	background-image: url("recursos/espectro.jpg");
+	background-position: center;
+	background-size: cover;
+	width: 200px;
+	height: 100%;
+	border-radius: 100px;
+	position: absolute;
+	z-index: 1;
+}
+.fav-info{
+	width: 195px;
+	height: 100%;
+	background-color:  #F0F0F0;
+	border: 1px solid #C9C9C9;
+	box-sizing: border-box;
+	opacity: 0;
+	border-radius: 100px;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: .5s;
+}
+.fav-ico{
+	width: 65%;
+	height: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	font-size: 25px;
+}
+.fav-ico a{
+	width: 45px;
+	height: 45px;
+	border-radius: 50px;
+	color: #454545;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.fav-c:hover{
+	transform: translate(-50px);
+}
+.fav-ico a:hover{
+	color: white;
+	background-color: #ADADAD;
+}
+.fav-c:hover .fav-info{
+	opacity: 1;
+	transform: translate(100px);
+	box-shadow: 7px 0px 0px #C9C9C9;
+	border-radius: 0 100px 100px 0;
+}
+.btn-expandir{
+	font-size: 10px;
+	background-color: #1597E0;
+	border-radius: 100px;
+	border: none;
+	width: 60px;
+	height: 25px;
+	margin-top: 70px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+}
+.btn-expandir i{
+	color: white;
+	margin: auto 3px;
+}
+.btn-expandir:hover{
+	background-color: #17aaff;
+}
+.btn-expandir:active{
+	padding: 0;
+}
+.btn-expandir:hover .fa-p{
+	animation: salto 1.5s ease-out infinite;
+}
+.btn-expandir:hover .fa-s{
+	animation: salto 1.5s ease-out infinite;
+	animation-delay: .1s;
+}
+.btn-expandir:hover .fa-t{
+	animation: salto 1.5s ease-out infinite;
+	animation-delay: .2s;
+}
+@keyframes salto{
+	0% {transform: translateY(0);}
+	10% {transform: translateY(-5px);}
+	20% {transform: translateY(0);}
+	100% {transform: translateY(0);}
+}
+@media screen and (max-width: 400px){
+	hr{
+		width: 250px;
+	}
+}
