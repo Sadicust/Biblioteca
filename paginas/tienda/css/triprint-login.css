@@ -51,8 +51,9 @@ body{
 	align-items: center;
 }
 .login-cnt{
-	width: 100%;
 	max-width: 405px;
+	width: 100%;
+	max-height: 600px;
 	height: 65%;
 	min-height: 550px;
 	font-family: 'Roboto';
