@@ -3,6 +3,9 @@
 	text-decoration: none;
 	outline: none;
 }
+html,body{
+	height: 100%;
+}
 body{
 	background: rgb(85,44,83);
 	background: linear-gradient(90deg, rgba(85,44,83,1) 0%, rgba(50,64,133,1) 100%); 
@@ -41,7 +44,7 @@ body{
 	border-right: 1px solid rgba(137, 172, 205, 0.5);
 	backdrop-filter: blur(25px);
 	width: 550px;
-	height: 100vh;
+	height: 100%;
 	min-height: 550px;
 	display: flex;
 	justify-content: center;
