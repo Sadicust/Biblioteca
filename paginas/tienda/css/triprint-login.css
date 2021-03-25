@@ -1,6 +1,7 @@
 *{
 	margin: 0;
 	text-decoration: none;
+	-webkit-tap-highlight-color: transparent;
 	outline: none;
 }
 html,body{
